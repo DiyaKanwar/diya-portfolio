@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diya Kanwar — Graphic Designer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">DK<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:kanwardiyal@gmail.com" class="nav-cta">Hire Me</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">DESIGN</div>
+    <div class="hero-content">
+      <div class="hero-tag">Visual Design & Branding</div>
+      <h1 class="hero-title">
+        <span class="line">Diya</span>
+        <span class="line italic">Kanwar</span>
+      </h1>
+      <p class="hero-sub">Graphic Designer crafting bold identities,<br>immersive interfaces & visual stories.</p>
+      <div class="hero-actions">
+        <a href="#gallery" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-marquee-wrap">
+      <div class="marquee">
+        <span>VISUAL DESIGN &nbsp;◆&nbsp; BRANDING &nbsp;◆&nbsp; UI/UX &nbsp;◆&nbsp; TYPOGRAPHY &nbsp;◆&nbsp; SOCIAL MEDIA &nbsp;◆&nbsp; MOTION &nbsp;◆&nbsp; PHOTOGRAPHY &nbsp;◆&nbsp; </span>
+        <span>VISUAL DESIGN &nbsp;◆&nbsp; BRANDING &nbsp;◆&nbsp; UI/UX &nbsp;◆&nbsp; TYPOGRAPHY &nbsp;◆&nbsp; SOCIAL MEDIA &nbsp;◆&nbsp; MOTION &nbsp;◆&nbsp; PHOTOGRAPHY &nbsp;◆&nbsp; </span>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">scroll ↓</div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-label">— WHO I AM</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Design is how<br><em>I speak.</em></h2>
+          <p>Creative and detail-oriented Graphic Designer with a strong foundation in visual design, typography, color theory, and layout principles. I design social media creatives, marketing materials, and complete brand identities — and I bring the same obsessive craft to every pixel.</p>
+          <p>Currently completing my B.E. in Computer Science at Chandigarh University (2026), I bridge the gap between engineering logic and artistic vision.</p>
+          <div class="about-tools">
+            <span>Photoshop</span>
+            <span>Illustrator</span>
+            <span>Figma</span>
+            <span>Canva</span>
+            <span>React</span>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-num">4+</div>
+            <div class="stat-label">Major Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years Designing</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Creative Ideas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section class="gallery-section" id="gallery">
+    <div class="gallery-header">
+      <div class="gallery-label">— SELECTED WORK</div>
+      <h2 class="gallery-title">Gallery</h2>
+      <p class="gallery-sub">Click any image to view it in full.</p>
+    </div>
+
+    <!-- Upload CTA strip -->
+    <div class="upload-strip">
+      <span class="upload-icon">📁</span>
+      <span>Add your designs below — click <strong>"Add Images"</strong> to load from your PC</span>
+      <label class="upload-btn" for="imageUpload">Add Images</label>
+      <input type="file" id="imageUpload" multiple accept="image/*" style="display:none"/>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- Pre-seeded cards from the dataset (images will be replaced by user uploads) -->
+      <div class="gallery-card" data-label="Poster Design" data-desc="Bold typographic poster with digital renaissance theme. Visual storytelling through layered composition.">
+        <div class="card-img-wrap">
+          <img src="images/719ab22a.jpg" alt="Digital Renaissance Poster" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Poster</div>
+              <div class="card-name">Digital Renaissance</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Business Card" data-desc="Clean, luxurious real estate back business card. Strong hierarchy and golden branding accents.">
+        <div class="card-img-wrap">
+          <img src="images/back_business_card.jpg" alt="Business Card" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Branding</div>
+              <div class="card-name">Business Card</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Abstract Art" data-desc="Vibrant abstract digital composition. Fluid shapes and bold color gradients.">
+        <div class="card-img-wrap">
+          <img src="images/c0ac0703.jpg" alt="Abstract Art" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Digital Art</div>
+              <div class="card-name">Abstract Composition</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Maximum Pulse" data-desc="High-energy event poster for Maximum Pulse. Explosive typography and neon palette.">
+        <div class="card-img-wrap">
+          <img src="images/de1db327.jpg" alt="Maximum Pulse Poster" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Event Poster</div>
+              <div class="card-name">Maximum Pulse</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Concept Book" data-desc="Editorial concept book cover design with striking red and black palette.">
+        <div class="card-img-wrap">
+          <img src="images/design.jpg" alt="Concept Book" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Editorial</div>
+              <div class="card-name">Concept Book</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Design Series 5" data-desc="Minimalist design series piece. Strong geometric forms and clean negative space.">
+        <div class="card-img-wrap">
+          <img src="images/design-5.jpg" alt="Design 5" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Graphic Design</div>
+              <div class="card-name">Design Series No.5</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Front Business Card" data-desc="Professional front business card with refined logo placement and typographic balance.">
+        <div class="card-img-wrap">
+          <img src="images/front_business_card.jpg" alt="Front Business Card" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Branding</div>
+              <div class="card-name">Front Business Card</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Hoarding" data-desc="Large format outdoor hoarding with bold dark visual direction and striking copy.">
+        <div class="card-img-wrap">
+          <img src="images/hoarding-1.jpg" alt="Hoarding Design" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">OOH / Print</div>
+              <div class="card-name">Hoarding Ad</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Instagram Post 4" data-desc="Social media creative with vibrant brand palette. Optimised for engagement and scroll-stopping impact.">
+        <div class="card-img-wrap">
+          <img src="images/instagram-post-4.jpg" alt="Instagram Post" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Social Media</div>
+              <div class="card-name">Instagram Creative</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Mobile App Design 1" data-desc="Kreuz Vinyl — mobile app UI design with record shop aesthetic. Dark, immersive interface with tactile feel.">
+        <div class="card-img-wrap">
+          <img src="images/mobile-app-design-1.jpg" alt="Mobile App 1" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">UI Design</div>
+              <div class="card-name">Kreuz Vinyl — App</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Mobile App Design 2" data-desc="Divinepedia mythology app — deep earth tones and editorial card layouts. Categorised visual content system.">
+        <div class="card-img-wrap">
+          <img src="images/mobile-app-design-2.jpg" alt="Mobile App 2" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">UI Design</div>
+              <div class="card-name">Divinepedia — App</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Mobile App Design 3" data-desc="Manodasha mental health app — calming colour palette with clean dashboard UI and empathetic design language.">
+        <div class="card-img-wrap">
+          <img src="images/mobile-app-design-3.jpg" alt="Mobile App 3" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">UI Design</div>
+              <div class="card-name">Manodasha — App</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Mobile App Design 4" data-desc="Fourth screen from the Kreuz Vinyl app series — consistent visual language across all screens.">
+        <div class="card-img-wrap">
+          <img src="images/mobile-app-design-4.jpg" alt="Mobile App 4" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">UI Design</div>
+              <div class="card-name">Kreuz Vinyl — Screen 4</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Moodboard Kreuz Vinyl" data-desc="Brand moodboard for Kreuz Vinyl record shop. Dark crimson, texture and vintage photographic references.">
+        <div class="card-img-wrap">
+          <img src="images/moodboard-kreuz-vinyl.jpg" alt="Moodboard" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Branding</div>
+              <div class="card-name">Kreuz Vinyl — Moodboard</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Photo Manipulation" data-desc="Advanced photo composite — second version. Seamless blending with cinematic colour grading.">
+        <div class="card-img-wrap">
+          <img src="images/photo-manipulation.jpg" alt="Photo Manipulation" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Photo Editing</div>
+              <div class="card-name">Photo Manipulation</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Poster 2" data-desc="Brand campaign poster — no fluff, just cocoa. Warm earthy tones and confident minimal layout.">
+        <div class="card-img-wrap">
+          <img src="images/poster-2.jpg" alt="Poster 2" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Campaign</div>
+              <div class="card-name">Just Cocoa — Poster</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Pixel & Code Poster" data-desc="Tech event poster combining pixel art and code aesthetics with bright editorial layout.">
+        <div class="card-img-wrap">
+          <img src="images/poster-design.jpg" alt="Pixel Code Poster" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Event Poster</div>
+              <div class="card-name">Pixel & Code</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="Work 1.2" data-desc="Illustrative editorial graphic with strong character and layered visual texture.">
+        <div class="card-img-wrap">
+          <img src="images/work-1-2.jpg" alt="Work 1.2" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Illustration</div>
+              <div class="card-name">Editorial Graphic</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-label="The Investor's Balance Sheet" data-desc="Cover design for The Investor's Balance Sheet — sophisticated use of white space and classic serif typography.">
+        <div class="card-img-wrap">
+          <img src="images/investor-balance-sheet.jpg" alt="Balance Sheet" class="card-img" onerror="this.parentElement.classList.add('img-placeholder')"/>
+          <div class="card-overlay">
+            <div class="card-info">
+              <div class="card-tag">Editorial</div>
+              <div class="card-name">Investor's Balance Sheet</div>
+            </div>
+            <button class="card-expand" onclick="openLightbox(this)">↗</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /gallery-grid -->
+
+    <!-- Dynamically added images appear here -->
+    <div class="gallery-grid" id="dynamicGrid"></div>
+
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-label">— LET'S WORK</div>
+      <h2>Have a project<br><em>in mind?</em></h2>
+      <p>I'm open to freelance design work, collaborations, and full-time opportunities. Let's create something remarkable together.</p>
+      <div class="contact-links">
+        <a href="mailto:kanwardiyal@gmail.com" class="contact-link">kanwardiyal@gmail.com</a>
+        <a href="tel:+919643885989" class="contact-link">+91 96438 85989</a>
+        <a href="https://www.linkedin.com/in/diya-kanwar-6a045024a/" target="_blank" class="contact-link">LinkedIn</a>
+        <a href="https://github.com/DiyaKanwar" target="_blank" class="contact-link">GitHub</a>
+        <a href="https://diya-kanwar-portfolio-craft.vercel.app/" target="_blank" class="contact-link">Portfolio Site</a>
+      </div>
+    </div>
+    <div class="contact-bg-text">HELLO</div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <span>© 2025 Diya Kanwar. Designed with intention.</span>
+    <span>Gurgaon, India</span>
+  </footer>
+
+  <!-- ── LIGHTBOX ── -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-prev" id="lbPrev" onclick="shiftLightbox(-1)">‹</button>
+    <div class="lb-content">
+      <img id="lbImg" src="" alt=""/>
+      <div class="lb-caption" id="lbCaption"></div>
+    </div>
+    <button class="lb-next" id="lbNext" onclick="shiftLightbox(1)">›</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
