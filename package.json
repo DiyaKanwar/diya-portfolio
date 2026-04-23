@@ -4,6 +4,7 @@
   "description": "A luxury editorial dark-themed portfolio website to showcase your graphic design work.",
   "main": "index.js",
   "scripts": {
+    "build": "echo 'Build complete'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
